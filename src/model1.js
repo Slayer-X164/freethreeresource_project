@@ -56,7 +56,7 @@ loader.load('/stylized_ww1_plane.glb',
     model = gltf.scene
     scene.add(model)
     // model.position.z = 0
-    model.position.y = 0.8
+    model.position.y = 1.3
 
     console.log(gltf.animations);
     //activating model animation
