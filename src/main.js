@@ -50,10 +50,10 @@ const resourceArray = [
     },
     {
         from: 'youtube',
-        title: 'All about Shadows in Three.js',
+        title: 'three.js - Dynamic Shadows',
         about: 'Shadows play a very big role in the lighting of 3D web development it gives a feel of real-life so in three JS',
-        openLink: 'https://youtu.be/efel24WXj7M?si=JtO7TACcokxQ5JH_',
-        level:'intermediate'
+        openLink: 'https://youtu.be/mVG6kEEAGA0?si=hEs1IFmheuXflrVo',
+        level:'beginner'
 
     },
 
