@@ -79,6 +79,7 @@ h2{
 .hero_content h1{
   font-size: 5.5vw;
   text-align: center;
+  cursor: default;
 }
 .hero_content h3{
   font-weight: 500;
@@ -105,8 +106,10 @@ h2{
 }
 .section2{
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
+  cursor: default;
+  padding-bottom: 40px;
 
 }
 .webgl_canvas2{
@@ -174,4 +177,106 @@ h2{
 }
 .advanced{
   background-color: rgba(255, 0, 0, 0.217);
+}
+.section3{
+  width: 100%;
+  height: auto;
+  padding-bottom: 80px;
+}
+.section3>h2{
+  font-size: 2vw;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.701);
+  text-align: center;
+  /* text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.234); */
+  padding: 30px 0;
+}
+.outerResourceContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.innerResourceContainer{
+  /* background-color: red; */
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+
+}
+.eachResource{
+  padding: 0.8vw;
+  width: 300px;
+  height: auto;
+  border: 2px solid #4d85ff34;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: start;
+  gap: 6px;
+  box-shadow: 0px 4px 20px 2px #4d4dff22;
+}
+.eachResource .from{
+  font-weight: 300;
+  font-size: 1vw;
+}
+.eachResource .resourceTitle{
+  font-weight: 600;
+  font-size: 1.3vw;
+}
+.eachResource .about{
+  font-size: 0.9vw;
+  color: rgba(23, 23, 23, 0.691);
+}
+.eachResource .resourceBtnContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resourceBtnContainer a{
+  margin-top: 10px;
+  background-color: #4d4dff;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  color: whitesmoke;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.from_level{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.from_level .resourceLevel{
+  font-weight: 400;
+  font-size: 13px;
+}
+footer{
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: auto;
+  padding: 20px 30px;
+}
+footer h3{
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 400;
+}
+footer a{
+  font-weight: 600;
+  color: black;
+}
+footer p{
+  text-align: center;
+  font-size: 1vw;
 }
