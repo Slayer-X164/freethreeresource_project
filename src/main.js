@@ -73,8 +73,6 @@ let html = resourceArray.map((e)=>{
             </div>`
 }).join('')
 
-console.log(html);
-
 const innerResourceContainer = document.querySelector('.innerResourceContainer')
 innerResourceContainer.innerHTML += html
 
