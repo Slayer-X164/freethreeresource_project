@@ -25,8 +25,6 @@ main{
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100%;
-  height: 50%;
 
 }
 nav{
@@ -70,7 +68,6 @@ h2{
   width: 100%;
   height: calc(90vh - 70px);
   display: flex;
-  /* background-color: red; */
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
@@ -224,8 +221,11 @@ h2{
   box-shadow: 0px 4px 20px 2px #4d4dff22;
 }
 .eachResource .from{
-  font-weight: 300;
-  font-size: 1vw;
+  font-weight: 500;
+  font-size: 0.8vw;
+  background-color: #c7c7c757;
+  padding: 5px;
+  border-radius: 5px;
 }
 .eachResource .resourceTitle{
   font-weight: 600;
@@ -260,6 +260,7 @@ h2{
 .from_level .resourceLevel{
   font-weight: 400;
   font-size: 13px;
+
 }
 footer{
   border-top: 1px solid rgba(0, 0, 0, 0.25);
@@ -279,4 +280,77 @@ footer a{
 footer p{
   text-align: center;
   font-size: 1vw;
+}
+
+@media only screen and (max-width:800px){
+
+  nav{
+    height: 40px;
+  }
+  nav h2{
+    font-size: 2.3vw;
+  }
+  .links a{
+    font-size: 1.9vw;
+  }
+  .section1 h1{
+    font-size: 6.3vw;
+  }
+  .hero_content{
+    height: 50vh;
+  }
+  .section1{
+    min-height: 60vh;
+  }
+  .roadmapContainer{
+    z-index: 2;
+  position: relative;
+  }
+  .section2 h2{
+    font-size: 3vw;
+  }
+  .roadmapContainer .title{
+    font-size: 2.6vw;
+  }
+  .roadmapContainer p{
+    font-size: 1.4vw;
+  }
+  .twoPartContainer{
+    max-width: 444px;
+  }
+  .roadmapContainer img{
+    width: 45px;
+  }
+  .roadmapContainer .level{
+    font-size: 1.3vw;
+  }
+  .section3 h2{
+    font-size: 3vw;
+  }
+
+  .innerResourceContainer{
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+  }
+  .eachResource{
+    padding: 10px;
+  }
+  .eachResource .from{
+    font-size: 1.5vw;
+    font-weight: 500;
+  }
+  .eachResource .resourceTitle{
+    font-size: 2vw;
+  }
+  .eachResource .about{
+    font-size: 1.5vw;
+  }
+  footer h3{
+    font-size: 1.7vw;
+  }
+  footer p{
+    font-size: 1.6vw;
+  }
 }

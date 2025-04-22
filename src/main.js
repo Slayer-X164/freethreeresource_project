@@ -77,6 +77,8 @@ const innerResourceContainer = document.querySelector('.innerResourceContainer')
 innerResourceContainer.innerHTML += html
 
 const startbtn = document.querySelector('#startbtn')
+const resourceSection = document.querySelector('#resource')
 startbtn.addEventListener('click',()=>{
-    scrollTo('#resource')
+    resourceSection.scrollIntoView({behavior:'smooth'})
+
 })
