@@ -297,10 +297,10 @@ footer p{
     font-size: 6.3vw;
   }
   .hero_content{
-    height: 120vh;
+    height: 100dvh;
   }
   .section1{
-    min-height: 60vh;
+    height: 100dvh;
   }
   .roadmapContainer{
     z-index: 2;
@@ -363,8 +363,11 @@ footer p{
   nav h2{
     font-size: 16px;
   }
+  .hero_container{
+    height: 100dvh;
+  }
   .hero_content{
-    height: 50vh;
+    height:100dvh;
     padding: 0 14px;
   }
   .hero_content h1{
@@ -399,6 +402,9 @@ footer p{
   }
   .eachContent img{
     width: 38px;
+  }
+  .section3{
+    padding-top: 60px;
   }
   .section3 h2{
     font-size: 20px;
