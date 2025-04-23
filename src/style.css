@@ -297,10 +297,14 @@ footer p{
     font-size: 6.3vw;
   }
   .hero_content{
+<<<<<<< HEAD
     height: 100vh;
+=======
+    height: 100dvh;
+>>>>>>> 3c5b48774518e07177e72531da776927cf82d2d0
   }
   .section1{
-    min-height: 60vh;
+    height: 100dvh;
   }
   .roadmapContainer{
     z-index: 2;
@@ -363,8 +367,15 @@ footer p{
   nav h2{
     font-size: 16px;
   }
+  .hero_container{
+    height: 100dvh;
+  }
   .hero_content{
+<<<<<<< HEAD
     height: 65vh;
+=======
+    height:100dvh;
+>>>>>>> 3c5b48774518e07177e72531da776927cf82d2d0
     padding: 0 14px;
   }
   .hero_content h1{
@@ -399,6 +410,9 @@ footer p{
   }
   .eachContent img{
     width: 38px;
+  }
+  .section3{
+    padding-top: 60px;
   }
   .section3 h2{
     font-size: 20px;
