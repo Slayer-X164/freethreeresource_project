@@ -297,7 +297,7 @@ footer p{
     font-size: 6.3vw;
   }
   .hero_content{
-    height: 50vh;
+    height: 100dvh;
   }
   .section1{
     min-height: 60vh;
@@ -354,6 +354,7 @@ footer p{
     font-size: 1.6vw;
   }
 }
+
 @media only screen and (max-width:480px){
   nav{
     height: auto;
