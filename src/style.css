@@ -354,7 +354,7 @@ footer p{
     font-size: 1.6vw;
   }
 }
-@media only screen and (max-width:430px){
+@media only screen and (max-width:480px){
   nav{
     height: auto;
     padding: 20px 14px;
