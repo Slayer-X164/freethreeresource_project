@@ -371,12 +371,7 @@ footer p{
     height: 100dvh;
   }
   .hero_content{
-<<<<<<< HEAD
     height: 65vh;
-=======
-    height:100dvh;
->>>>>>> 3c5b48774518e07177e72531da776927cf82d2d0
-    padding: 0 14px;
   }
   .hero_content h1{
     font-size: 28px;
