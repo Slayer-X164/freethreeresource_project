@@ -56,6 +56,14 @@ const resourceArray = [
         level:'beginner'
 
     },
+    {
+        from: 'youtube',
+        title: 'Three.js Post-processing effect',
+        about: 'A lesson on how to use UnrealBloomPass, sobel, dot and colorify post processing effects in three.js',
+        openLink: 'https://youtu.be/BOMfiXnq7Y8?si=pP_wZV8tRpMLeQYB',
+        level:'advanced'
+
+    },
 
 ]
 
