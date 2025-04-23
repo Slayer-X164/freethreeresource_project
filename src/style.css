@@ -354,3 +354,73 @@ footer p{
     font-size: 1.6vw;
   }
 }
+@media only screen and (max-width:430px){
+  nav{
+    height: auto;
+    padding: 20px 14px;
+  }
+  nav h2{
+    font-size: 16px;
+  }
+  .hero_content{
+    height: 50vh;
+    padding: 0 14px;
+  }
+  .hero_content h1{
+    font-size: 28px;
+  }
+  .hero_content h3{
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .hero_container{
+    gap: 1rem;
+  }
+  .hero_content button{
+    margin-top: 20px;
+  }
+  .section2 h2{
+    font-size: 20px;
+    padding: 20px 14px;
+  }
+  .eachContent{
+    gap: 2.2rem;
+  }
+  .eachContent .title{
+    font-size: 16px;
+  }
+  .eachContent p{
+    font-size: 12.5px;
+    width: auto;
+  }
+  .eachContent .level{
+    font-size: 10px;
+  }
+  .eachContent img{
+    width: 38px;
+  }
+  .section3 h2{
+    font-size: 20px;
+  }
+  .eachResource .from{
+    font-size: 12px;
+  }
+  .eachResource .resourceLevel{
+    font-size: 11px;
+  }
+  .eachResource .resourceTitle{
+    font-size: 16px;
+  }
+  .eachResource .about{
+    font-size: 12px;
+  }
+  .eachResource .from_level{
+    padding-bottom:6px;
+  }
+  footer h3{
+    font-size: 14px;
+  }
+  footer p{
+    font-size: 12px;
+  }
+}

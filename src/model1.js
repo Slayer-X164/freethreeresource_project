@@ -18,28 +18,6 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.z = 3;
 
-// Cube
-// const geometry = new THREE.BoxGeometry();
-// const loader = new THREE.CubeTextureLoader();
-// const envMap = loader.load([
-//   'https://threejs.org/examples/textures/cube/Bridge2/posx.jpg',
-//   'https://threejs.org/examples/textures/cube/Bridge2/negx.jpg',
-//   'https://threejs.org/examples/textures/cube/Bridge2/posy.jpg',
-//   'https://threejs.org/examples/textures/cube/Bridge2/negy.jpg',
-//   'https://threejs.org/examples/textures/cube/Bridge2/posz.jpg',
-//   'https://threejs.org/examples/textures/cube/Bridge2/negz.jpg'
-// ]);
-// scene.environment = envMap;
-
-// const material = new THREE.MeshPhysicalMaterial({
-//   color: new THREE.Color("blue"),
-
-// });
-
-// const cube = new THREE.Mesh(geometry, material);
-// cube.position.y = 0.5;
-// scene.add(cube);
-
 // Lighting
 const directionalLight = new THREE.DirectionalLight(0xffffff, 20);
 directionalLight.position.set(1, 1, 1);
@@ -47,6 +25,20 @@ scene.add(directionalLight);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(ambientLight);
+
+function updateModelForDevice() {
+  if (!model) return;
+
+  const width = window.innerWidth;
+
+  if (width <= 430) { // iPhone 13 width and similar mobile screens
+    model.scale.set(0.7, 0.7, 0.7);       // smaller model
+    model.position.y = 1.4;               // shift it a bit more up
+  } else {
+    model.scale.set(1, 1, 1);             // default size
+    model.position.y = 1.3;               // default position
+  }
+}
 
 let mixer
 let model;
@@ -66,6 +58,8 @@ loader.load('/stylized_ww1_plane.glb',
     const action = mixer.clipAction(clip)
     action.play()
 
+    updateModelForDevice()
+
   },
   undefined,
   (err)=>{
@@ -74,14 +68,11 @@ loader.load('/stylized_ww1_plane.glb',
 )
 
 // Handle resize
-let scalingFactor
 window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-  scalingFactor = Math.max(window.innerHeight / 1300,0.8)
-  model.scale.set(scalingFactor,scalingFactor,scalingFactor)
-  console.log(scalingFactor);
+  updateModelForDevice()
 
 });
 
