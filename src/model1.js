@@ -40,11 +40,21 @@ function updateModelForDevice() {
 
 let mixer
 let model;
+let loadingScreen = document.querySelector('#loader')
+let body = document.querySelector('body')
+let tl = gsap.timeline()
 const loader = new GLTFLoader()
 loader.load('/stylized_ww1_plane.glb',
   (gltf)=>{
     model = gltf.scene
     scene.add(model)
+    gsap.to(loadingScreen,{
+      top:'100%',
+      duration:2,
+      ease:"power2.out",
+    })
+    body.style.overflow = 'visible'
+
 
     model.position.x = 0
     model.position.y = 1

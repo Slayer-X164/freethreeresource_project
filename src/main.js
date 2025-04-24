@@ -1,5 +1,7 @@
 import './style.css'
 
+
+
 const resourceArray = [
     {
         from:'youtube',
@@ -101,16 +103,48 @@ openMenu.addEventListener('click',()=>{
     closeMenu.style.display = "block"
     gsap.to(mobileNav, {
         right: 0,
-        duration: 0.5,
-        ease: "power3.out"
+        duration: 0.8,
+        ease: "power2.out",
      });
-    console.log("open");
+    gsap.from('.links a',{
+        opacity:0,
+        x:30,
+        stagger:0.3,
+        duration:0.5,
+        ease:'power2.out'
+    })
   })
+
+  //card animation
+
+
+
+    document.querySelectorAll('.eachResource').forEach((card)=>{
+        gsap.from(card, {
+            scrollTrigger: {
+              trigger: card,
+              start: "top 75%",
+              end:'top 50%',
+            //   markers:true,
+              scrub:true
+            },
+            opacity: 0,
+            y: 50,
+            stagger: 0.2,
+            duration: 1,
+            ease: "power3.out"
+          });
+    })
+
 
 closeMenu.addEventListener('click',()=>{
     closeMenu.style.display = "none"
     openMenu.style.display = "block"
-    gsap.to(mobileNav, { right: "-100%", duration: 0.5, ease: "power3.in" });
+    gsap.to(mobileNav, {
+        right: "-100%",
+        duration: 0.5,
+        ease: "power3.in"
+    });
 })
 
 window.addEventListener('resize',()=>{
@@ -121,3 +155,17 @@ window.addEventListener('resize',()=>{
         openMenu.style.display=''
     }
 })
+//making nav links work properly
+const navLinks = document.querySelectorAll('.navLinks')
+navLinks.forEach((link)=>{
+    link.addEventListener('click',()=>{
+        closeMenu.style.display = "none"
+        openMenu.style.display = "block"
+        gsap.to(mobileNav, {
+            right: "-100%",
+            duration: 0.3,
+            ease: "power3.in"
+        });
+    })
+})
+

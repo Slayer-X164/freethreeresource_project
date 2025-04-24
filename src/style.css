@@ -10,6 +10,36 @@ body,html{
   height: 100%;
   background-color: rgb(226, 237, 255);
 }
+.no_scroll{
+  overflow: hidden;
+}
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #4d4dff; /* or any background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999999;
+  font-family: sans-serif;
+  font-size: 19px;
+  gap: 15px;
+}
+.spinner {
+  border: 4px solid rgba(255,255,255,0.1);
+  border-left-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 main{
   width: auto;
   height: auto;
@@ -25,7 +55,7 @@ main{
   z-index: 1000;
   position: fixed;
   top:0;
-  right: 100%;
+  right: -100%;
   background-color: rgb(226, 237, 255);
   display: flex;
   justify-content: center;
@@ -62,6 +92,7 @@ main{
   flex-direction: column;
 }
 .mobileNav .links a{
+  position: relative;
   font-size: 40px;
 }
 .mobileNav .links a:last-child{
@@ -327,6 +358,8 @@ footer{
   width: 100%;
   height: auto;
   padding: 20px 30px;
+  position: relative;
+  z-index: 999999;
 }
 footer h3{
   text-align: center;
