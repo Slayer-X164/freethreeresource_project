@@ -90,3 +90,34 @@ startbtn.addEventListener('click',()=>{
     resourceSection.scrollIntoView({behavior:'smooth'})
 
 })
+
+//menubar
+const mobileNav = document.querySelector('.mobileNav')
+const openMenu = document.querySelector('#openMenu')
+const closeMenu = document.querySelector('#closeMenu')
+
+openMenu.addEventListener('click',()=>{
+    openMenu.style.display = "none"
+    closeMenu.style.display = "block"
+    gsap.to(mobileNav, {
+        right: 0,
+        duration: 0.5,
+        ease: "power3.out"
+     });
+    console.log("open");
+  })
+
+closeMenu.addEventListener('click',()=>{
+    closeMenu.style.display = "none"
+    openMenu.style.display = "block"
+    gsap.to(mobileNav, { right: "-100%", duration: 0.5, ease: "power3.in" });
+})
+
+window.addEventListener('resize',()=>{
+    if(window.innerWidth>600){
+        openMenu.style.display = "none"
+    }
+    else{
+        openMenu.style.display=''
+    }
+})
