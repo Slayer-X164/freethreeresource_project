@@ -18,7 +18,7 @@ main{
   z-index: 2;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 }
 .webgl_canvas1{
   position: absolute;
@@ -363,8 +363,11 @@ footer p{
   nav h2{
     font-size: 16px;
   }
+  .section1{
+    height: 70vh;
+  }
   .hero_container{
-    height: 100dvh;
+    height: 50dvh;
   }
   .hero_content{
     height: 65vh;
