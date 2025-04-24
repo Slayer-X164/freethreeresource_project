@@ -1,5 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
+import { gsap } from 'gsap'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const canvas = document.querySelector(".webgl_canvas1");
@@ -34,9 +35,6 @@ function updateModelForDevice() {
   if (width <= 600) { // iPhone 13 width and similar mobile screens
     model.scale.set(0.7, 0.7, 0.7);       // smaller model
     model.position.y = 1.4;               // shift it a bit more up
-  } else {
-    model.scale.set(1, 1, 1);             // default size
-    model.position.y = 1.3;               // default position
   }
 }
 
@@ -47,8 +45,15 @@ loader.load('/stylized_ww1_plane.glb',
   (gltf)=>{
     model = gltf.scene
     scene.add(model)
-    // model.position.z = 0
-    model.position.y = 1.3
+
+    model.position.x = 0
+    model.position.y = 1
+    model.position.z = 0
+
+    model.rotation.x = 0.8
+    model.rotation.y = 0
+    model.rotation.z = 0
+
 
     console.log(gltf.animations);
     //activating model animation
@@ -86,3 +91,58 @@ function animate() {
   }
 }
 animate();
+
+let arrPositionOfModel = [
+  {
+    id:'home',
+    position:{x:0,y:1,z:0},
+    rotation:{x:0.8,y:0,z:0}
+  },
+  {
+    id:'roadmap',
+    position:{x:0,y:0,z:-1.5},
+    rotation:{x:1.5,y:0,z:0}
+  },
+  {
+    id:'resource',
+    position:{x:0,y:0,z:1.5},
+    rotation:{x:0,y:0,z:0}
+  }
+]
+const modelAnimation = ()=>{
+  const sections = document.querySelectorAll('.sec')
+  let currentSection;
+  sections.forEach((section)=>{
+    const rect = section.getBoundingClientRect()
+    if(rect.top <= window.innerHeight/2){
+      currentSection = section.id
+    }
+  })
+  let position_active = arrPositionOfModel.findIndex(val=>
+    val.id == currentSection
+  )
+  if(position_active>=0){
+      let newCoordinates = arrPositionOfModel[position_active]
+      gsap.to(model.position,{
+        x:newCoordinates.position.x,
+        y:newCoordinates.position.y,
+        z:newCoordinates.position.z,
+        duration:2,
+        ease:"power3.out"
+      })
+      gsap.to(model.rotation,{
+        y:newCoordinates.rotation.y,
+        z:newCoordinates.rotation.z,
+        x:newCoordinates.rotation.x,
+        duration:2,
+        ease:"power3.out"
+      })
+
+  }
+
+}
+window.addEventListener('scroll',()=>{
+  if(model){
+    modelAnimation()
+  }
+})

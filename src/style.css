@@ -21,7 +21,7 @@ main{
   height: 100vh;
 }
 .webgl_canvas1{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -179,6 +179,7 @@ h2{
   width: 100%;
   height: auto;
   padding-bottom: 80px;
+
 }
 .section3>h2{
   font-size: 2vw;
@@ -208,8 +209,10 @@ h2{
 
 }
 .eachResource{
+  z-index: 2;
+  background-color: #eaeaf7;
   padding: 0.8vw;
-  width: 300px;
+  width: 320px;
   height: auto;
   border: 2px solid #4d85ff34;
   border-radius: 10px;
@@ -303,7 +306,7 @@ footer p{
     height: 100dvh;
   }
   .roadmapContainer{
-    z-index: 2;
+    z-index: 0;
   position: relative;
   }
   .section2 h2{
@@ -364,7 +367,7 @@ footer p{
     font-size: 16px;
   }
   .section1{
-    height: 70vh;
+    height: 75vh;
   }
   .hero_container{
     height: 50dvh;
