@@ -34,7 +34,7 @@ function updateModelForDevice() {
 
   if (width <= 600) { // iPhone 13 width and similar mobile screens
     model.scale.set(0.7, 0.7, 0.7);       // smaller model
-    model.position.y = 1.4;               // shift it a bit more up
+    model.position.y = 1;               // shift it a bit more up
   }
 }
 
