@@ -116,6 +116,9 @@ main{
 
 }
 nav{
+  background: rgba(226, 237, 255, 0.495); /* transparent white */
+  backdrop-filter: blur(5px); /* Gaussian blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
   position: sticky;
   top: 0;
   left: 0;
@@ -153,6 +156,7 @@ h2{
   padding-bottom: 40px;
 }
 .hero_content{
+  /* mix-blend-mode: difference; */
   width: 100%;
   height: calc(90vh - 70px);
   display: flex;

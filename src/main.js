@@ -132,6 +132,7 @@ openMenu.addEventListener('click',()=>{
             y: 50,
             stagger: 0.2,
             duration: 1,
+            scale:0.5,
             ease: "power3.out"
           });
     })
@@ -168,4 +169,3 @@ navLinks.forEach((link)=>{
         });
     })
 })
-
