@@ -44,6 +44,14 @@ const resourceArray = [
     },
     {
         from: 'youtube',
+        title: 'Make a Globe with Custom Shaders',
+        about: 'Every important piece of complex jargon will be explained in plainspeak within this tutorial, including: Vertex Shaders, Fragment Shaders, UVs, and Normals.',
+        openLink: 'https://youtu.be/vM8M4QloVL0?si=IyBtKvkGfvZzJPIZ',
+        level:'intermediate'
+
+    },
+    {
+        from: 'youtube',
         title: 'Three.js Shaders (GLSL) Crash Course For Absolute Beginners',
         about: 'discussing things like how shaders work, GLSL language, vertex shader, fragment shader, dot product, useful GLSL functions',
         openLink: 'https://youtu.be/oKbCaj1J6EI?si=if3Rsmrb9tL1lL-F',
