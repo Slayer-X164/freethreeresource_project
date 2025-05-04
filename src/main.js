@@ -74,6 +74,22 @@ const resourceArray = [
         level:'advanced'
 
     },
+    {
+        from: 'youtube',
+        title: 'React Three Fiber Crash Course for Beginners',
+        about: 'This is a step-by-step guide into creating 3D web applications using the WebGL/WebGPU, React, Three.js, React Three Fiber, Drei',
+        openLink: 'https://youtu.be/jKy2Rm7EVOk?si=xyXAeN9WBq3YJViu',
+        level:'beginner'
+
+    },
+    // {
+    //     from: 'youtube',
+    //     title: '',
+    //     about: '',
+    //     openLink: '',
+    //     level:''
+
+    // },
 
 ]
 
